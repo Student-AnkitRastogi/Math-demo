@@ -1,0 +1,18 @@
+class Solution {
+public:
+    int numberOfMatches(int n) {
+        int match = 0;
+        int teams = n;
+        while(teams != 1) {
+            if(teams % 2 == 0) {
+                match += teams/2;
+                teams = teams/2;
+            }
+            else {
+                match += (teams - 1)/2;
+                teams = (teams - 1)/2 +1;
+            }
+        }
+        return match;
+    }
+};
